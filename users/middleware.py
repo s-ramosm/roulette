@@ -11,6 +11,8 @@ class UserIdMiddleware:
 
     def __call__(self, request):
         user_id = request.headers.get('user_id')
+        print(request.headers)
+        print("Por aqui pase", user_id)
 
         if user_id:
             try:
