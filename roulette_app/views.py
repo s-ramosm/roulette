@@ -15,6 +15,7 @@ class RouletteViewSet(ModelViewSet):
     """
     queryset = Roulette.objects.all()
     serializer_class =  RouletteSerializer
+    http_method_names = ['get', 'post']
 
     def get_win_bets(self, roulette):
         

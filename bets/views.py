@@ -9,7 +9,7 @@ from rest_framework import status
 class BetViewSet(viewsets.ModelViewSet):
     queryset = Bet.objects.all()
     serializer_class = BetSerializer
-
+    http_method_names = ['get', 'post']
 
     def create(self, request, *args, **kwargs):
         
